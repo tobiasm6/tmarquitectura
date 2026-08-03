@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>document.documentElement.classList.add("js");</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TM · Arquitectura — Todas las obras</title>
+<meta name="description" content="TM Arquitectura — estudio de arquitectura y construcción. Obra nueva, remodelación integral y dirección de obra en CABA y Zona Norte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,600;125,700;125,800&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --caliza:#F2EEE7; --caliza2:#F8F6F1; --grafito:#232220; --ink:#1A1918;
+  --soft:#5A564F; --oxido:#A1492B; --oxido2:#C77B5F; --linea:#D9D3C8;
+  --disp:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Spectral',Georgia,serif;
+  --mono:'IBM Plex Mono','Courier New',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-weight:300;color:var(--grafito);background:var(--caliza);line-height:1.65;font-size:17px}
+img{display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+::selection{background:var(--oxido);color:#fff}
+
+/* ---------- header ---------- */
+header{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .35s,box-shadow .35s;padding:0}
+header.solid{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--linea)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;max-width:1120px;margin:0 auto}
+.logo{font-family:var(--disp);font-stretch:125%;font-weight:800;font-size:16px;letter-spacing:.14em;text-decoration:none;color:#fff;transition:color .35s;text-transform:uppercase}
+.logo em{font-style:normal;color:var(--oxido2)}
+header.solid .logo{color:var(--grafito)}
+nav.menu{display:flex;gap:26px}
+nav.menu a{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;transition:color .25s}
+header.solid nav.menu a{color:var(--soft)}
+nav.menu a:hover{color:var(--oxido2)}
+header.solid nav.menu a:hover{color:var(--oxido)}
+
+html:not(.js) #hdr{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--linea)}
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(178deg,rgba(26,25,24,.42) 0%,rgba(26,25,24,.12) 42%,rgba(26,25,24,.78) 100%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:0 28px 72px;color:#fff}
+.hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxido2);display:flex;align-items:center;gap:14px}
+.hero-kick::before{content:"";width:34px;height:2px;background:var(--oxido)}
+.hero h1{font-family:var(--disp);font-stretch:110%;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.01em;margin:22px 0 26px;text-transform:uppercase}
+.hero h1 .thin{display:block;font-weight:600;color:var(--caliza);opacity:.92}
+.hero-sub{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-trust{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:16px}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:16px 30px;background:var(--oxido);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--oxido);transition:background .25s,color .25s}
+.hero-cta:hover{background:transparent;color:#fff}
+.hero-cta::after{content:"→";font-size:15px}
+.obra{padding-top:64px;margin-top:64px;border-top:1px solid var(--linea)}
+.obra:first-of-type{padding-top:0;margin-top:0;border-top:none}
+.obra-attr{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido2);border:1px solid var(--linea);padding:4px 12px;border-radius:2px}
+.autor{max-width:680px;margin-top:36px}
+.autor h3{font-family:var(--disp);font-stretch:110%;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
+.autor .rol{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido2);margin:6px 0 16px}
+.ver-todas-wrap{margin-top:56px;text-align:center}
+.ver-todas{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border:1px solid var(--tinta);color:var(--tinta);font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s}
+.ver-todas:hover{background:var(--tinta);color:var(--caliza)}
+.hero-cap{position:absolute;right:28px;bottom:22px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase}
+
+/* ---------- section chrome ---------- */
+section{padding:104px 0}
+section + section{border-top:1px solid var(--linea)}
+.kick{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--oxido);text-transform:uppercase;display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.kick::before{content:"";width:34px;height:2px;background:var(--oxido)}
+h2{font-family:var(--disp);font-stretch:125%;font-weight:800;font-size:clamp(30px,4.4vw,50px);line-height:1.04;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:30px}
+.lead{font-size:20px;line-height:1.7;max-width:820px;font-weight:300}
+.lead strong{font-weight:500}
+
+/* ---------- socios ---------- */
+.socios{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:52px}
+.socio{background:#fff;border-top:3px solid var(--oxido);padding:30px 30px 34px;box-shadow:0 1px 0 var(--linea)}
+.socio h3{font-family:var(--disp);font-stretch:125%;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.01em}
+.socio .rol{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--oxido);margin:8px 0 16px}
+.socio p{font-size:15.5px;line-height:1.65}
+
+/* ---------- obras ---------- */
+#obras .kick,#obras h2{max-width:820px}
+.obra{margin-top:88px}
+.obra:first-of-type{margin-top:56px}
+.obra-head{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:end;margin-bottom:26px}
+.obra h3{font-family:var(--disp);font-stretch:125%;font-weight:700;font-size:clamp(24px,3vw,32px);text-transform:uppercase;line-height:1.05}
+.ficha{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido);margin-top:10px}
+.obra-desc{font-size:16px;line-height:1.7;color:var(--soft)}
+
+/* comparador antes/después */
+.compare{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--grafito);user-select:none;touch-action:pan-y}
+.compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cmp-before-wrap{position:absolute;inset:0;overflow:hidden;width:var(--x,50%)}
+.cmp-before-wrap img{width:auto;height:100%;max-width:none}
+.cmp-line{position:absolute;top:0;bottom:0;left:var(--x,50%);width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 0 1px rgba(0,0,0,.15)}
+.cmp-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--oxido);color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:9px 12px;border-radius:999px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.cmp-tag{position:absolute;top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;padding:6px 12px;z-index:3}
+.cmp-tag-a{left:16px;background:rgba(26,25,24,.82)}
+.cmp-tag-d{right:16px;background:var(--oxido)}
+.cmp-range{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:4;margin:0;pointer-events:none}
+.compare{cursor:ew-resize}
+.cmp-hint{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:12px 0 26px}
+html:not(.js) .cmp-knob{display:none}
+html:not(.js) .cmp-hint{visibility:hidden}
+.apoyo{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.apoyo figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.apoyo figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);margin-top:9px;line-height:1.5}
+
+/* ---------- portal (obra nueva) ---------- */
+.pn-grid{display:grid;grid-template-columns:2fr 1fr;gap:16px;align-items:stretch}
+.pn-grid figure img{width:100%;height:100%;object-fit:cover}
+.pn-grid figure:first-child img{aspect-ratio:3/2}
+.pn-grid figure:last-child img{aspect-ratio:3/4}
+.hero-loc{font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--oxido2);margin-top:12px}
+.inv-block{margin-top:70px}
+.inv-block .inv-stats{margin:34px 0}
+.inv-p{font-size:17px;line-height:1.7;color:#CFC9BE;max-width:820px}
+.inv-p strong{color:#fff;font-weight:500}
+
+/* ---------- listado ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:52px 0 56px;border:1px solid var(--linea);background:#fff}
+.stat{padding:26px 24px;border-right:1px solid var(--linea)}
+.stat:last-child{border-right:none}
+.stat b{font-family:var(--disp);font-stretch:125%;font-weight:800;font-size:clamp(28px,3.6vw,44px);display:block;line-height:1;color:var(--grafito)}
+.stat span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--soft);text-transform:uppercase;display:block;margin-top:10px}
+.filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.filtros button{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--linea);background:#fff;color:var(--soft);cursor:pointer;transition:all .2s}
+.filtros button:hover{border-color:var(--oxido);color:var(--oxido)}
+.filtros button.on{background:var(--grafito);border-color:var(--grafito);color:#fff}
+.tabla-scroll{overflow-x:auto;border:1px solid var(--linea)}
+table{width:100%;border-collapse:collapse;background:#fff}
+thead th{background:var(--grafito);color:#fff;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;text-align:left;padding:13px 16px;font-weight:500}
+tbody td{padding:12px 16px;border-bottom:1px solid var(--linea);font-size:15px}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--caliza2)}
+.c-anio{font-family:var(--mono);color:var(--oxido);font-size:12.5px;white-space:nowrap}
+.c-obra{font-family:var(--disp);font-stretch:125%;font-weight:600;font-size:14.5px}
+.c-m2{text-align:right;font-family:var(--mono);font-size:13px}
+th.c-m2h{text-align:right}
+.c-tip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--soft);white-space:nowrap}
+.nota-tabla{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);margin-top:16px}
+tr.hide{display:none}
+
+/* ---------- inversión (term sheet) ---------- */
+.inv{background:var(--ink);color:var(--caliza)}
+.inv .kick{color:var(--oxido2)}
+.inv .kick::before{background:var(--oxido2)}
+.inv h2{color:#fff}
+.inv .lead{color:#CFC9BE}
+.inv .lead strong{color:#fff;font-weight:500}
+.inv-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:52px 0;border:1px solid #3A3833}
+.inv-stats .stat{background:transparent;border-right:1px solid #3A3833}
+.inv-stats .stat b{color:#fff}
+.inv-stats .stat span{color:#8F8A80}
+.inv-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-bottom:52px}
+.inv-h{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--oxido2);margin-bottom:18px}
+.inv-list{list-style:none}
+.inv-list li{font-size:15.5px;line-height:1.6;padding:12px 0 12px 24px;position:relative;border-bottom:1px solid #33312D;color:#CFC9BE}
+.inv-list li::before{content:"";position:absolute;left:0;top:22px;width:10px;height:2px;background:var(--oxido)}
+.inv-tabla{border:1px solid #3A3833}
+.inv-tabla table{background:transparent}
+.inv-tabla thead th{background:#2B2926}
+.inv-tabla tbody td{border-color:#33312D;color:#E8E3D9;font-size:15.5px}
+.inv-tabla tbody tr:hover{background:#242220}
+.inv-tabla .c-obra{color:#fff}
+.inv-tabla .c-m2{color:var(--oxido2)}
+.inv .nota-tabla{color:#8F8A80}
+
+/* ---------- contacto ---------- */
+.cta{text-align:center}
+.cta .kick{justify-content:center}
+.cta .kick::before{display:none}
+.cta p.lead{margin:0 auto 44px;max-width:640px}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;padding:16px 28px;transition:all .25s;display:inline-block}
+.btn-solid{background:var(--grafito);color:#fff}
+.btn-solid:hover{background:var(--oxido)}
+.btn-line{border:1px solid var(--grafito);color:var(--grafito)}
+.btn-line:hover{border-color:var(--oxido);color:var(--oxido)}
+.zona{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);margin-top:52px}
+footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--soft);text-transform:uppercase;border-top:1px solid var(--linea)}
+
+/* ---------- reveals ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .js .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .js .reveal.in{opacity:1;transform:none}
+}
+
+@media(max-width:760px){
+  nav.menu{display:none}
+  section{padding:72px 0}
+  .hero-content{padding:0 22px 60px}
+  .hero h1{font-stretch:100%;font-size:clamp(26px,7.4vw,40px);letter-spacing:-.015em;margin:16px 0 20px;line-height:1.06}
+  h2{font-stretch:100%;font-size:clamp(26px,7.6vw,38px)}
+  .obra h3{font-stretch:100%}
+  .stat b{font-stretch:100%}
+  .hero-sub{font-size:11px;letter-spacing:.12em}
+  .hero-loc{font-size:11px;letter-spacing:.14em}
+  .hero-kick{font-size:11px;letter-spacing:.18em}
+  .obra-head{grid-template-columns:1fr}
+  .apoyo{grid-template-columns:1fr}
+  .socios{grid-template-columns:1fr}
+  .inv-grid{grid-template-columns:1fr}
+  .pn-grid{grid-template-columns:1fr}
+  .pn-grid figure:last-child img{aspect-ratio:3/2}
+  .stats,.inv-stats{grid-template-columns:1fr 1fr}
+  .stats .stat:nth-child(2n),.inv-stats .stat:nth-child(2n){border-right:none}
+  .stats .stat:nth-child(-n+2),.inv-stats .stat:nth-child(-n+2){border-bottom:1px solid var(--linea)}
+  .inv-stats .stat:nth-child(-n+2){border-bottom-color:#3A3833}
+}
+.zocalo{background:var(--tinta);color:rgba(255,255,255,.7);padding:64px 0 28px;margin-top:0}
+.zocalo-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+.zocalo-logo{font-family:var(--disp);font-stretch:110%;font-size:20px;text-transform:uppercase;color:#fff;letter-spacing:.02em}
+.zocalo-tag{margin-top:12px;font-size:14px;max-width:320px;line-height:1.5}
+.zocalo-meta{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido2)}
+.zocalo-h{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.zocalo-col a,.zocalo-col span{display:block;color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;margin-bottom:10px;transition:color .2s}
+.zocalo-col a:hover{color:#fff}
+.zocalo-base{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.zocalo-base a{color:rgba(255,255,255,.7);text-decoration:none}
+.zocalo-base a:hover{color:#fff}
+@media(max-width:760px){.zocalo-grid{grid-template-columns:1fr;gap:32px}.zocalo-base{flex-direction:column;gap:12px;text-align:center}}
+</style>
+</head>
+<body id="top">
+<header id="hdr">
+  <div class="nav">
+    <a class="logo" href="#top">TM<em> · </em>Arquitectura</a>
+    <nav class="menu">
+      <a href="index.html#estudio">Estudio</a>
+      <a href="index.html#obras">Obras</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+<section id="obras" class="obras-page">
+  <div class="wrap">
+    <p class="kick">Portafolio</p>
+    <h2>Todas las obras</h2>
+    <p class="lead">Obra nueva, remodelación integral y reconversión de espacios en Pilar, Zona Norte y CABA. Cada proyecto, del plano a la llave.</p>
+  </div>
+
+<article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Casa El Portal</h3>
+      <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
+    </div>
+    <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del socio fundador — el estudio construye donde vive.</p>
+  </div>
+  <div class="pn-grid">
+    <figure><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"><figcaption>Contrafrente: galería con parrilla, integrada al parque</figcaption></figure>
+    <figure><img src="img/03.webp" alt="Casa El Portal — frente" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></figure>
+  </div>
+</article><article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Casa San Jorge</h3>
+      <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
+    </div>
+    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con el volumen del quincho revestido en piedra, carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
+  </div>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div>
+  <p class="cmp-hint">Frente — deslizá para comparar</p>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/06.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div>
+  <p class="cmp-hint">Contrafrente — deslizá para comparar</p>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/08.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div>
+  <p class="cmp-hint">Lateral — deslizá para comparar</p>
+  <div class="apoyo">
+    <figure><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería del frente" loading="lazy"><figcaption>Durante la obra — pérgola metálica y nueva mampostería del frente</figcaption></figure>
+    <figure><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></figure>
+    <figure><img src="img/12.webp" alt="Después — deck y estar exterior sobre el lateral" loading="lazy"><figcaption>Después — deck y estar exterior sobre el lateral</figcaption></figure></div>
+</article><article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Quincho La Selva</h3>
+      <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    </div>
+    <p class="obra-desc">Reconversión de un galpón en desuso de una quinta en Pilar en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada, baño completo y portón corredizo de madera.</p>
+  </div>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div>
+  <p class="cmp-hint">Estar y hogar — deslizá para comparar</p>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/15.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/16.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div>
+  <p class="cmp-hint">Comedor y cocina — deslizá para comparar</p>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/17.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/18.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div>
+  <p class="cmp-hint">Baño — deslizá para comparar</p>
+  <div class="apoyo">
+    <figure><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy"><figcaption>Estar, hogar y cocina — vista general</figcaption></figure>
+    <figure><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></figure></div>
+</article><article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Quincho Reclus</h3>
+      <p class="ficha">San Isidro · 2018 · 30 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    </div>
+    <p class="obra-desc">Reconversión de un quincho de ladrillo visto en un espacio de estar y parrilla al exterior. Se reemplazó el techo de tejas por una pérgola metálica negra y machimbre, se construyó una barra de hormigón alisado y se integró el conjunto al parque y la pileta.</p>
+  </div>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/21.webp" alt="Quincho Reclus — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/22.webp" alt="Quincho Reclus — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho Reclus">
+  </div>
+  <p class="cmp-hint">Deslizá para comparar antes / después</p>
+  <div class="apoyo">
+    <figure><img src="img/23.webp" alt="Barra de hormigón alisado" loading="lazy"><figcaption>Barra de hormigón alisado</figcaption></figure>
+    <figure><img src="img/24.webp" alt="Parrilla y salamandra Tromen" loading="lazy"><figcaption>Parrilla y salamandra Tromen</figcaption></figure>
+    <figure><img src="img/25.webp" alt="Galería y pileta" loading="lazy"><figcaption>Galería y pileta</figcaption></figure></div>
+</article><article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Monoambiente Tagle</h3>
+      <p class="ficha">CABA · 2020 · 25 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    </div>
+    <p class="obra-desc">Optimización integral de un monoambiente de 25 m². Una cama rebatible libera el ambiente principal de día; una cocina lineal blanca con mesada de madera y un baño con piso calcáreo blanco y negro completan una intervención pensada para multiplicar el uso de cada metro.</p>
+  </div>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/26.webp" alt="Monoambiente Tagle — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/27.webp" alt="Monoambiente Tagle — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Monoambiente Tagle">
+  </div>
+  <p class="cmp-hint">Deslizá para comparar antes / después</p>
+  <div class="apoyo">
+    <figure><img src="img/28.webp" alt="Cocina lineal con mesada de madera" loading="lazy"><figcaption>Cocina lineal con mesada de madera</figcaption></figure>
+    <figure><img src="img/29.webp" alt="Baño con piso calcáreo blanco y negro" loading="lazy"><figcaption>Baño con piso calcáreo blanco y negro</figcaption></figure>
+    <figure><img src="img/30.webp" alt="Dormitorio y comedor integrados" loading="lazy"><figcaption>Dormitorio y comedor integrados</figcaption></figure></div>
+</article><article class="obra reveal">
+  <div class="obra-head">
+    <div>
+      <h3>Cocina Los Tacos</h3>
+      <p class="ficha">B° Los Tacos, Escobar · 2020 · 30 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    </div>
+    <p class="obra-desc">Apertura de una cocina cerrada hacia el comedor y la galería. Se eliminó el tabique, se incorporó una isla con mesada negra y campana de acero, y se sumó un nicho de madera que ordena los electrodomésticos y vincula la cocina con el parque.</p>
+  </div>
+  <div class="compare" data-compare>
+    <img class="cmp-after" src="img/31.webp" alt="Cocina Los Tacos — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/32.webp" alt="Cocina Los Tacos — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Cocina Los Tacos">
+  </div>
+  <p class="cmp-hint">Deslizá para comparar antes / después</p>
+  <div class="apoyo">
+    <figure><img src="img/33.webp" alt="Isla y campana de acero" loading="lazy"><figcaption>Isla y campana de acero</figcaption></figure>
+    <figure><img src="img/34.webp" alt="Galería revestida en madera" loading="lazy"><figcaption>Galería revestida en madera</figcaption></figure>
+    <figure><img src="img/35.webp" alt="Nicho de madera para electrodomésticos" loading="lazy"><figcaption>Nicho de madera para electrodomésticos</figcaption></figure></div>
+</article>
+  <div class="wrap ver-todas-wrap">
+    <a href="index.html" class="ver-todas">← Volver al inicio</a>
+  </div>
+
+</section>
+<footer class="zocalo">
+  <div class="wrap zocalo-grid">
+    <div class="zocalo-brand">
+      <p class="zocalo-logo">TM · Arquitectura</p>
+      <p class="zocalo-tag">Se proyecta con criterio. Se construye con oficio.</p>
+      <p class="zocalo-meta">+50 proyectos entregados desde 2014</p>
+    </div>
+    <div class="zocalo-col">
+      <p class="zocalo-h">Estudio</p>
+      <a href="index.html#obras">Obras</a>
+      <a href="obras.html" class="cur">Todas las obras</a>
+      <a href="index.html#estudio">El estudio</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <div class="zocalo-col">
+      <p class="zocalo-h">Contacto</p>
+      <a href="https://wa.me/5491167369265">WhatsApp · 11-6736-9265</a>
+      <a href="mailto:moyanotobias@gmail.com">moyanotobias@gmail.com</a>
+      <span>Pilar · Zona Norte · CABA</span>
+    </div>
+  </div>
+  <div class="wrap zocalo-base">
+    <span>© 2026 TM · Arquitectura — Tobías Moyano</span>
+    <a href="#top">Volver arriba ↑</a>
+  </div>
+</footer>
+<script>
+(function(){
+  // header solid on scroll
+  var hdr=document.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', window.scrollY>40); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // before/after compare — drag/touch en toda la foto (iOS friendly)
+  document.querySelectorAll('[data-compare]').forEach(function(c){
+    var r=c.querySelector('.cmp-range');
+    function set(v){ v=Math.max(0,Math.min(100,v)); c.style.setProperty('--x', v+'%'); if(r) r.value=v; }
+    function fromX(x){ var b=c.getBoundingClientRect(); set((x-b.left)/b.width*100); }
+    if(r){ r.addEventListener('input',function(){ set(parseFloat(r.value)); }); set(r.value); }
+    var down=false;
+    c.addEventListener('pointerdown',function(e){
+      down=true; fromX(e.clientX);
+      try{ c.setPointerCapture(e.pointerId); }catch(_){}
+    });
+    c.addEventListener('pointermove',function(e){ if(down){ fromX(e.clientX); e.preventDefault(); } });
+    ['pointerup','pointercancel'].forEach(function(ev){
+      c.addEventListener(ev,function(){ down=false; });
+    });
+    // fallback touch para visores sin Pointer Events
+    c.addEventListener('touchstart',function(e){ fromX(e.touches[0].clientX); },{passive:true});
+    c.addEventListener('touchmove',function(e){ fromX(e.touches[0].clientX); },{passive:true});
+  });
+
+  // reveals
+  var mq=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(!mq.matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // count-up stats
+  function fmt(n,f){ n=Math.round(n); return f==='miles' ? n.toLocaleString('es-AR') : String(n); }
+  var counted=false;
+  function countUp(){
+    if(counted) return; counted=true;
+    document.querySelectorAll('[data-count]').forEach(function(el){
+      var target=parseInt(el.getAttribute('data-count'),10), f=el.getAttribute('data-fmt');
+      if(mq.matches){ el.textContent=fmt(target,f); return; }
+      var t0=null, dur=1100;
+      function step(ts){ if(!t0)t0=ts; var p=Math.min(1,(ts-t0)/dur); p=1-Math.pow(1-p,3);
+        el.textContent=fmt(target*p,f); if(p<1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ countUp(); so.disconnect(); } }); },{threshold:.3});
+    var s=document.querySelector('.stats'); if(s) so.observe(s);
+  } else countUp();
+
+  // filtros tabla
+  var btns=document.querySelectorAll('.filtros button');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+      var f=b.getAttribute('data-f');
+      document.querySelectorAll('#tabla-obras tbody tr').forEach(function(tr){
+        tr.classList.toggle('hide', f!=='*' && tr.getAttribute('data-t')!==f);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
