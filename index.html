@@ -241,19 +241,21 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 @media(max-width:760px){.social-grid{grid-template-columns:1fr;gap:32px}}
 
 
-/* ---------- filas de sliders antes/después ---------- */
-.cmp-row{display:grid;gap:14px;margin:0 0 26px}
-.cmp-row-2{grid-template-columns:repeat(2,1fr)}
-.cmp-row-3{grid-template-columns:repeat(3,1fr)}
-.cmp-row .cmp-cell{min-width:0}
-.cmp-row .compare{aspect-ratio:3/4}
-.cmp-row .cmp-hint{margin:8px 0 0;font-size:10px}
-.cmp-row .cmp-knob{font-size:11px}
-.cmp-row .cmp-tag{font-size:9px;padding:3px 7px}
-@media(max-width:760px){
-  .cmp-row-2,.cmp-row-3{grid-template-columns:1fr;gap:20px}
-  .cmp-row .compare{aspect-ratio:3/2}
-}
+
+
+
+/* ---------- obras home: frente único + texto ancho fijo ---------- */
+.obra{max-width:820px;margin-left:auto;margin-right:auto}
+.obra-head{display:block;margin-bottom:22px;max-width:680px}
+.obra-head h3{text-align:left}
+.obra-head .ficha{text-align:left}
+.obra-head .obra-desc{margin-top:14px;text-align:left;max-width:680px}
+.obra-frente{width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--grafito);display:block;position:relative}
+.obra-frente>img{width:100%;height:100%;object-fit:cover;display:block}
+figure.obra-frente{margin:0}
+.obra .cmp-hint{margin:12px 0 18px}
+.ver-obra{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido);text-decoration:none;border-bottom:1px solid var(--oxido);padding-bottom:3px;transition:gap .2s,color .2s}
+.ver-obra:hover{gap:14px;color:var(--grafito);border-color:var(--grafito)}
 
 </style>
 </head>
@@ -303,93 +305,55 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <p class="kick">Portfolio</p>
     <h2>Obras destacadas</h2>
     <p class="lead">Obra nueva y remodelaciones integrales que muestran el método completo: proyecto, ejecución y terminación. En las remodelaciones, deslizá el comparador para ver el antes y el después.</p>
-    
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Casa El Portal</h3>
-      <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
-    </div>
-    <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del socio fundador — el estudio construye donde vive.</p>
-  </div>
-  <div class="pn-grid">
-    <figure><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"><figcaption>Contrafrente: galería con parrilla, integrada al parque</figcaption></figure>
-    <figure><img src="img/03.webp" alt="Casa El Portal — frente" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></figure>
-  </div>
-</article>
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Casa San Jorge</h3>
-      <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
-      <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
-    </div>
-    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con el volumen del quincho revestido en piedra, carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
-  </div>
-  <div class="cmp-row cmp-row-3"><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div><p class="cmp-hint">Frente — deslizá para comparar</p></div><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/06.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div><p class="cmp-hint">Contrafrente — deslizá para comparar</p></div><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/08.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div><p class="cmp-hint">Lateral — deslizá para comparar</p></div></div>
 
-  <div class="apoyo">
-    <figure><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería del frente" loading="lazy"><figcaption>Durante la obra — pérgola metálica y nueva mampostería del frente</figcaption></figure>
-    <figure><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></figure>
-    <figure><img src="img/12.webp" alt="Después — deck y estar exterior sobre el lateral" loading="lazy"><figcaption>Después — deck y estar exterior sobre el lateral</figcaption></figure></div>
-</article>
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Quincho La Selva</h3>
-      <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
-      <span class="obra-attr">En conjunto con kull·arq</span>
-    </div>
-    <p class="obra-desc">Reconversión de un galpón en desuso de una quinta en Pilar en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada, baño completo y portón corredizo de madera.</p>
-  </div>
-  <div class="cmp-row cmp-row-3"><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div><p class="cmp-hint">Estar y hogar — deslizá para comparar</p></div><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/15.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/16.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div><p class="cmp-hint">Comedor y cocina — deslizá para comparar</p></div><div class="cmp-cell"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/17.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/18.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div><p class="cmp-hint">Baño — deslizá para comparar</p></div></div>
+    <article class="obra reveal">
+      <div class="obra-head">
+        <h3>Casa El Portal</h3>
+        <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
+        <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del fundador — el estudio construye donde vive.</p>
+      </div>
+      <figure class="obra-frente"><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"></figure>
+      <a href="obras.html#casa-el-portal" class="ver-obra">Ver obra completa →</a>
+    </article>
 
-  <div class="apoyo">
-    <figure><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy"><figcaption>Estar, hogar y cocina — vista general</figcaption></figure>
-    <figure><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></figure></div>
-</article>
+    <article class="obra reveal">
+      <div class="obra-head">
+        <h3>Casa San Jorge</h3>
+        <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
+        <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
+        <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
+      </div>
+      <div class="obra-frente compare" data-compare>
+        <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" fetchpriority="high">
+        <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+        <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+        <span class="cmp-tag cmp-tag-a">Antes</span>
+        <span class="cmp-tag cmp-tag-d">Después</span>
+        <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+      </div>
+      <p class="cmp-hint">Frente — deslizá para comparar</p>
+      <a href="obras.html#casa-san-jorge" class="ver-obra">Ver obra completa →</a>
+    </article>
+
+    <article class="obra reveal">
+      <div class="obra-head">
+        <h3>Quincho La Selva</h3>
+        <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
+        <span class="obra-attr">En conjunto con kull·arq</span>
+        <p class="obra-desc">Reconversión de un galpón en desuso en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada y baño completo.</p>
+      </div>
+      <div class="obra-frente compare" data-compare>
+        <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+        <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+        <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+        <span class="cmp-tag cmp-tag-a">Antes</span>
+        <span class="cmp-tag cmp-tag-d">Después</span>
+        <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+      </div>
+      <p class="cmp-hint">Estar y hogar — deslizá para comparar</p>
+      <a href="obras.html#quincho-la-selva" class="ver-obra">Ver obra completa →</a>
+    </article>
+  </div>
   <div class="wrap ver-todas-wrap">
     <a href="obras.html" class="ver-todas">Ver todas las obras →</a>
   </div>
