@@ -45,9 +45,22 @@ html:not(.js) #hdr{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);bo
 .hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:0 28px 72px;color:#fff}
 .hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxido2);display:flex;align-items:center;gap:14px}
 .hero-kick::before{content:"";width:34px;height:2px;background:var(--oxido)}
-.hero h1{font-family:var(--disp);font-stretch:125%;font-weight:800;font-size:clamp(42px,7.2vw,92px);line-height:.98;letter-spacing:-.015em;margin:22px 0 26px;text-transform:uppercase}
+.hero h1{font-family:var(--disp);font-stretch:110%;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.01em;margin:22px 0 26px;text-transform:uppercase}
 .hero h1 .thin{display:block;font-weight:600;color:var(--caliza);opacity:.92}
 .hero-sub{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-trust{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:16px}
+.hero-cta{display:inline-flex;align-items:center;gap:12px;margin-top:30px;padding:16px 30px;background:var(--oxido);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--oxido);transition:background .25s,color .25s}
+.hero-cta:hover{background:transparent;color:#fff}
+.hero-cta::after{content:"→";font-size:15px}
+.obra{padding-top:64px;margin-top:64px;border-top:1px solid var(--linea)}
+.obra:first-of-type{padding-top:0;margin-top:0;border-top:none}
+.obra-attr{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido2);border:1px solid var(--linea);padding:4px 12px;border-radius:2px}
+.autor{max-width:680px;margin-top:36px}
+.autor h3{font-family:var(--disp);font-stretch:110%;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
+.autor .rol{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido2);margin:6px 0 16px}
+.ver-todas-wrap{margin-top:56px;text-align:center}
+.ver-todas{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border:1px solid var(--tinta);color:var(--tinta);font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s}
+.ver-todas:hover{background:var(--tinta);color:var(--caliza)}
 .hero-cap{position:absolute;right:28px;bottom:22px;z-index:2;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase}
 
 /* ---------- section chrome ---------- */
@@ -178,7 +191,7 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   nav.menu{display:none}
   section{padding:72px 0}
   .hero-content{padding:0 22px 60px}
-  .hero h1{font-stretch:100%;font-size:clamp(34px,10.2vw,58px);letter-spacing:-.02em;margin:18px 0 22px}
+  .hero h1{font-stretch:100%;font-size:clamp(26px,7.4vw,40px);letter-spacing:-.015em;margin:16px 0 20px;line-height:1.06}
   h2{font-stretch:100%;font-size:clamp(26px,7.6vw,38px)}
   .obra h3{font-stretch:100%}
   .stat b{font-stretch:100%}
@@ -196,6 +209,18 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   .stats .stat:nth-child(-n+2),.inv-stats .stat:nth-child(-n+2){border-bottom:1px solid var(--linea)}
   .inv-stats .stat:nth-child(-n+2){border-bottom-color:#3A3833}
 }
+.zocalo{background:var(--tinta);color:rgba(255,255,255,.7);padding:64px 0 28px;margin-top:0}
+.zocalo-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+.zocalo-logo{font-family:var(--disp);font-stretch:110%;font-size:20px;text-transform:uppercase;color:#fff;letter-spacing:.02em}
+.zocalo-tag{margin-top:12px;font-size:14px;max-width:320px;line-height:1.5}
+.zocalo-meta{margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido2)}
+.zocalo-h{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.zocalo-col a,.zocalo-col span{display:block;color:rgba(255,255,255,.7);text-decoration:none;font-size:14px;margin-bottom:10px;transition:color .2s}
+.zocalo-col a:hover{color:#fff}
+.zocalo-base{display:flex;justify-content:space-between;align-items:center;padding-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.zocalo-base a{color:rgba(255,255,255,.7);text-decoration:none}
+.zocalo-base a:hover{color:#fff}
+@media(max-width:760px){.zocalo-grid{grid-template-columns:1fr;gap:32px}.zocalo-base{flex-direction:column;gap:12px;text-align:center}}
 </style>
 </head>
 <body>
@@ -206,7 +231,6 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <nav class="menu">
       <a href="#estudio">Estudio</a>
       <a href="#obras">Obras</a>
-      <a href="#listado">Antecedentes</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -217,9 +241,10 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   <div class="hero-veil"></div>
   <div class="hero-content">
     <p class="hero-kick">Arquitectura + Construcción</p>
-    <h1>Proyectamos<span class="thin">y construimos.</span></h1>
+    <h1>Se proyecta con criterio.<span class="thin">Se construye con oficio.</span></h1>
     <p class="hero-sub">Obra nueva · Remodelación integral · Dirección de obra</p>
-    <p class="hero-loc">Trabajamos en Zona Norte: Pilar</p>
+    <p class="hero-trust">+50 proyectos entregados desde 2014 · Pilar y Zona Norte</p>
+    <a href="#contacto" class="hero-cta">Empecemos tu proyecto</a>
   </div>
   <p class="hero-cap">Casa El Portal · Pilar · Obra nueva</p>
 </div>
@@ -228,18 +253,11 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   <div class="wrap">
     <p class="kick">El estudio</p>
     <h2>Quiénes somos</h2>
-    <p class="lead">TM Arquitectura es un estudio integral: <strong>proyecta y ejecuta</strong>. La convicción detrás es simple: la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye — acá esa distancia no existe. Detrás hay diez años de obra: obra nueva, remodelación integral y dirección en Zona Norte y CABA, con un mismo criterio de principio a fin: que lo que se dibuja se pueda construir, y que lo que se construye responda al presupuesto y a los plazos acordados.</p>
-    <div class="socios">
-      <div class="socio reveal">
-        <h3>Tobías Moyano</h3>
-        <p class="rol">Co-fundador · Arquitecto (UBA)</p>
-        <p>Arquitecto (UBA). Se formó en obra desde adentro: entre 2014 y 2018 trabajó en una constructora familiar — cómputo, presupuesto y pie de obra. Pasó por el Gobierno de la Ciudad, en el proyecto de urbanización de la Villa 31, y co-fundó Kull Arq, donde durante cinco años proyectó y construyó obras de todo tipo. TM reúne ese recorrido: cada proyecto nace sabiendo cómo se construye y cuánto cuesta.</p>
-      </div>
-      <div class="socio reveal">
-        <h3>Indalecio Ruiz Duggan</h3>
-        <p class="rol">Co-fundador · Administrador de empresas</p>
-        <p>Administrador de empresas. Conduce la gestión de compras y la relación con proveedores: cada material llega a obra al mejor precio, en tiempo y sin sorpresas en el presupuesto.</p>
-      </div>
+    <p class="lead">TM Arquitectura es un <strong>estudio de autor</strong> que proyecta y ejecuta. La convicción detrás es simple: la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye — acá esa distancia no existe. Detrás hay diez años de obra: obra nueva, remodelación integral y dirección en Zona Norte y CABA, con un mismo criterio de principio a fin: que lo que se dibuja se pueda construir, y que lo que se construye responda al presupuesto y a los plazos acordados.</p>
+    <div class="autor reveal">
+      <h3>Tobías Moyano</h3>
+      <p class="rol">Arquitecto (UBA) · Fundador</p>
+      <p>Me formé en obra desde adentro: entre 2014 y 2018 trabajé en una constructora familiar — cómputo, presupuesto y pie de obra. Pasé por el Gobierno de la Ciudad, en el proyecto de urbanización de la Villa 31, y durante cinco años proyecté y construí obras de todo tipo. TM reúne ese recorrido: cada proyecto nace sabiendo cómo se construye y cuánto cuesta, y lo firmo con mi nombre porque respondo por cada obra de principio a fin.</p>
     </div>
   </div>
 </section>
@@ -263,12 +281,12 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <figure><img src="img/03.webp" alt="Casa El Portal — frente" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></figure>
   </div>
 </article>
-    
 <article class="obra reveal">
   <div class="obra-head">
     <div>
       <h3>Casa San Jorge</h3>
       <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
     </div>
     <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con el volumen del quincho revestido en piedra, carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
   </div>
@@ -309,6 +327,7 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <div>
       <h3>Quincho La Selva</h3>
       <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
     </div>
     <p class="obra-desc">Reconversión de un galpón en desuso de una quinta en Pilar en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada, baño completo y portón corredizo de madera.</p>
   </div>
@@ -343,139 +362,11 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <figure><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy"><figcaption>Estar, hogar y cocina — vista general</figcaption></figure>
     <figure><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></figure></div>
 </article>
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Quincho Reclus</h3>
-      <p class="ficha">San Isidro · 2018 · 30 m² · Remodelación integral</p>
-    </div>
-    <p class="obra-desc">Reconversión de un quincho de ladrillo visto en un espacio de estar y parrilla al exterior. Se reemplazó el techo de tejas por una pérgola metálica negra y machimbre, se construyó una barra de hormigón alisado y se integró el conjunto al parque y la pileta.</p>
-  </div>
-  <div class="compare" data-compare>
-    <img class="cmp-after" src="img/21.webp" alt="Quincho Reclus — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/22.webp" alt="Quincho Reclus — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho Reclus">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/23.webp" alt="Barra de hormigón alisado" loading="lazy"><figcaption>Barra de hormigón alisado</figcaption></figure>
-    <figure><img src="img/24.webp" alt="Parrilla y salamandra Tromen" loading="lazy"><figcaption>Parrilla y salamandra Tromen</figcaption></figure>
-    <figure><img src="img/25.webp" alt="Galería y pileta" loading="lazy"><figcaption>Galería y pileta</figcaption></figure></div>
-</article>
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Monoambiente Tagle</h3>
-      <p class="ficha">CABA · 2020 · 25 m² · Remodelación integral</p>
-    </div>
-    <p class="obra-desc">Optimización integral de un monoambiente de 25 m². Una cama rebatible libera el ambiente principal de día; una cocina lineal blanca con mesada de madera y un baño con piso calcáreo blanco y negro completan una intervención pensada para multiplicar el uso de cada metro.</p>
-  </div>
-  <div class="compare" data-compare>
-    <img class="cmp-after" src="img/26.webp" alt="Monoambiente Tagle — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/27.webp" alt="Monoambiente Tagle — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Monoambiente Tagle">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/28.webp" alt="Cocina lineal con mesada de madera" loading="lazy"><figcaption>Cocina lineal con mesada de madera</figcaption></figure>
-    <figure><img src="img/29.webp" alt="Baño con piso calcáreo blanco y negro" loading="lazy"><figcaption>Baño con piso calcáreo blanco y negro</figcaption></figure>
-    <figure><img src="img/30.webp" alt="Dormitorio y comedor integrados" loading="lazy"><figcaption>Dormitorio y comedor integrados</figcaption></figure></div>
-</article>
-<article class="obra reveal">
-  <div class="obra-head">
-    <div>
-      <h3>Cocina Los Tacos</h3>
-      <p class="ficha">B° Los Tacos, Escobar · 2020 · 30 m² · Remodelación integral</p>
-    </div>
-    <p class="obra-desc">Apertura de una cocina cerrada hacia el comedor y la galería. Se eliminó el tabique, se incorporó una isla con mesada negra y campana de acero, y se sumó un nicho de madera que ordena los electrodomésticos y vincula la cocina con el parque.</p>
-  </div>
-  <div class="compare" data-compare>
-    <img class="cmp-after" src="img/31.webp" alt="Cocina Los Tacos — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/32.webp" alt="Cocina Los Tacos — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Cocina Los Tacos">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/33.webp" alt="Isla y campana de acero" loading="lazy"><figcaption>Isla y campana de acero</figcaption></figure>
-    <figure><img src="img/34.webp" alt="Galería revestida en madera" loading="lazy"><figcaption>Galería revestida en madera</figcaption></figure>
-    <figure><img src="img/35.webp" alt="Nicho de madera para electrodomésticos" loading="lazy"><figcaption>Nicho de madera para electrodomésticos</figcaption></figure></div>
-</article>
+  <div class="wrap ver-todas-wrap">
+    <a href="obras.html" class="ver-todas">Ver todas las obras →</a>
   </div>
 </section>
 
-
-
-<section id="listado">
-  <div class="wrap">
-    <p class="kick">Antecedentes · 2016 — 2026</p>
-    <h2>Listado de obras</h2>
-    <div class="stats">
-      <div class="stat"><b data-count="36">36</b><span>Obras ejecutadas</span></div>
-      <div class="stat"><b data-count="3095" data-fmt="miles">3.095</b><span>m² intervenidos</span></div>
-      <div class="stat"><b data-count="6">6</b><span>Obra nueva</span></div>
-      <div class="stat"><b>2016–2026</b><span>Período</span></div>
-    </div>
-    <div class="filtros" role="group" aria-label="Filtrar por tipo de trabajo">
-      <button class="on" data-f="*">Todas</button>
-      <button data-f="Remodelacion">Remodelación</button>
-      <button data-f="Obra Nueva">Obra nueva</button>
-      <button data-f="Arreglos">Arreglos</button>
-    </div>
-    <div class="tabla-scroll">
-    <table id="tabla-obras">
-      <thead><tr><th>Año</th><th>Obra</th><th>Localidad</th><th class="c-m2h">m²</th><th>Tipología</th></tr></thead>
-      <tbody>
-<tr data-t="Obra Nueva"><td class="c-anio">2026</td><td class="c-obra">Casita Julian</td><td class="c-loc">Merlo</td><td class="c-m2">40</td><td class="c-tip">Obra nueva · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2026</td><td class="c-obra">Pueyrredon</td><td class="c-loc">CABA</td><td class="c-m2">30</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2025</td><td class="c-obra">Libertador</td><td class="c-loc">CABA</td><td class="c-m2">160</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2025</td><td class="c-obra">Parana</td><td class="c-loc">CABA</td><td class="c-m2">180</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2025</td><td class="c-obra">San Jorge</td><td class="c-loc">Don Torcuato</td><td class="c-m2">200</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Arreglos"><td class="c-anio">2024</td><td class="c-obra">San Lorenzo</td><td class="c-loc">San Isidro</td><td class="c-m2">100</td><td class="c-tip">Arreglos · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2024</td><td class="c-obra">Cerrito</td><td class="c-loc">CABA</td><td class="c-m2">50</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Obra Nueva"><td class="c-anio">2024</td><td class="c-obra">Oficinas Talar</td><td class="c-loc">Don Torcuato</td><td class="c-m2">60</td><td class="c-tip">Obra nueva · Oficina</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2024</td><td class="c-obra">Shoenstatt</td><td class="c-loc">Pilar</td><td class="c-m2">80</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2024</td><td class="c-obra">Agote</td><td class="c-loc">CABA</td><td class="c-m2">45</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2023</td><td class="c-obra">Capilla</td><td class="c-loc">Capilla</td><td class="c-m2">250</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2023</td><td class="c-obra">Guemes</td><td class="c-loc">San Isidro</td><td class="c-m2">130</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2022</td><td class="c-obra">Ideal</td><td class="c-loc">Villa Martelli</td><td class="c-m2">20</td><td class="c-tip">Remodelación · Fábrica</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2022</td><td class="c-obra">Juncal</td><td class="c-loc">CABA</td><td class="c-m2">85</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2022</td><td class="c-obra">Allende</td><td class="c-loc">Pilar</td><td class="c-m2">25</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2021</td><td class="c-obra">Ruggeri</td><td class="c-loc">CABA</td><td class="c-m2">45</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Obra Nueva"><td class="c-anio">2021</td><td class="c-obra">Casa SAL</td><td class="c-loc">Pilar</td><td class="c-m2">40</td><td class="c-tip">Obra nueva · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2021</td><td class="c-obra">Cocina Cordoba</td><td class="c-loc">CABA</td><td class="c-m2">25</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Obra Nueva"><td class="c-anio">2021</td><td class="c-obra">Portal</td><td class="c-loc">Pilar</td><td class="c-m2">220</td><td class="c-tip">Obra nueva · Casa</td></tr>
-<tr data-t="Obra Nueva"><td class="c-anio">2021</td><td class="c-obra">Alto Peru</td><td class="c-loc">San Isidro</td><td class="c-m2">200</td><td class="c-tip">Obra nueva · Casa</td></tr>
-<tr data-t="Obra Nueva"><td class="c-anio">2021</td><td class="c-obra">Casa Pablo</td><td class="c-loc">Escobar</td><td class="c-m2">180</td><td class="c-tip">Obra nueva · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2020</td><td class="c-obra">MSH</td><td class="c-loc">Don Torcuato</td><td class="c-m2">80</td><td class="c-tip">Remodelación · Fábrica</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2020</td><td class="c-obra">Tacos</td><td class="c-loc">Escobar</td><td class="c-m2">30</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2020</td><td class="c-obra">Estanislao Diaz</td><td class="c-loc">San Isidro</td><td class="c-m2">60</td><td class="c-tip">Remodelación · PH</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2020</td><td class="c-obra">Tagle</td><td class="c-loc">CABA</td><td class="c-m2">25</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2019</td><td class="c-obra">Ampliación dormitorio</td><td class="c-loc">Pilar</td><td class="c-m2">50</td><td class="c-tip">Remodelación · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2019</td><td class="c-obra">La Selva</td><td class="c-loc">Pilar</td><td class="c-m2">60</td><td class="c-tip">Remodelación · Quincho</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2019</td><td class="c-obra">Quesada</td><td class="c-loc">CABA</td><td class="c-m2">60</td><td class="c-tip">Remodelación · PH</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2018</td><td class="c-obra">La Candelaria</td><td class="c-loc">Capilla</td><td class="c-m2">40</td><td class="c-tip">Remodelación · Quincho</td></tr>
-<tr data-t="Arreglos"><td class="c-anio">2018</td><td class="c-obra">Horqueta</td><td class="c-loc">San Isidro</td><td class="c-m2">50</td><td class="c-tip">Arreglos · Casa</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2018</td><td class="c-obra">Quincho Reclus</td><td class="c-loc">San Isidro</td><td class="c-m2">30</td><td class="c-tip">Remodelación · Quincho</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2017</td><td class="c-obra">Laprida</td><td class="c-loc">CABA</td><td class="c-m2">20</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2017</td><td class="c-obra">Montevideo</td><td class="c-loc">CABA</td><td class="c-m2">120</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2017</td><td class="c-obra">Jose Hernandez</td><td class="c-loc">CABA</td><td class="c-m2">150</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2017</td><td class="c-obra">Libertador (PARQ)</td><td class="c-loc">CABA</td><td class="c-m2">125</td><td class="c-tip">Remodelación · Depto</td></tr>
-<tr data-t="Remodelacion"><td class="c-anio">2016</td><td class="c-obra">Villa 31</td><td class="c-loc">CABA</td><td class="c-m2">30</td><td class="c-tip">Remodelación · Depto</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="nota-tabla">La superficie indicada corresponde a metros intervenidos.</p>
-  </div>
-</section>
 
 <section class="cta" id="contacto">
   <div class="wrap">
@@ -490,7 +381,32 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   </div>
 </section>
 
-<footer>TM · Arquitectura — Tobías Moyano · Indalecio Ruiz Duggan — 2026</footer>
+<footer class="zocalo">
+  <div class="wrap zocalo-grid">
+    <div class="zocalo-brand">
+      <p class="zocalo-logo">TM · Arquitectura</p>
+      <p class="zocalo-tag">Se proyecta con criterio. Se construye con oficio.</p>
+      <p class="zocalo-meta">+50 proyectos entregados desde 2014</p>
+    </div>
+    <div class="zocalo-col">
+      <p class="zocalo-h">Estudio</p>
+      <a href="#obras">Obras</a>
+      <a href="obras.html">Todas las obras</a>
+      <a href="#estudio">El estudio</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div class="zocalo-col">
+      <p class="zocalo-h">Contacto</p>
+      <a href="https://wa.me/5491167369265">WhatsApp · 11-6736-9265</a>
+      <a href="mailto:moyanotobias@gmail.com">moyanotobias@gmail.com</a>
+      <span>Pilar · Zona Norte · CABA</span>
+    </div>
+  </div>
+  <div class="wrap zocalo-base">
+    <span>© 2026 TM · Arquitectura — Tobías Moyano</span>
+    <a href="#top">Volver arriba ↑</a>
+  </div>
+</footer>
 
 <script>
 (function(){
