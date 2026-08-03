@@ -4,7 +4,7 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TM · Arquitectura — Proyectamos y construimos</title>
+<title>TM · Arquitectura — Todas las obras</title>
 <meta name="description" content="TM Arquitectura — estudio de arquitectura y construcción. Obra nueva, remodelación integral y dirección de obra en CABA y Zona Norte.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,10 +42,10 @@ html:not(.js) #hdr{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);bo
 .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(178deg,rgba(26,25,24,.42) 0%,rgba(26,25,24,.12) 42%,rgba(26,25,24,.78) 100%)}
-.hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:0 28px 72px;color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center}
-.hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxido2);display:flex;align-items:center;gap:14px;justify-content:center}
-.hero-kick::before,.hero-kick::after{content:"";width:34px;height:2px;background:var(--oxido)}
-.hero h1{font-family:var(--disp);font-stretch:105%;font-weight:800;font-size:clamp(28px,4.4vw,52px);line-height:1.08;letter-spacing:-.005em;margin:22px 0 26px;text-transform:uppercase;white-space:nowrap}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:0 28px 72px;color:#fff}
+.hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxido2);display:flex;align-items:center;gap:14px}
+.hero-kick::before{content:"";width:34px;height:2px;background:var(--oxido)}
+.hero h1{font-family:var(--disp);font-stretch:110%;font-weight:800;font-size:clamp(34px,5.4vw,64px);line-height:1.02;letter-spacing:-.01em;margin:22px 0 26px;text-transform:uppercase}
 .hero h1 .thin{display:block;font-weight:600;color:var(--caliza);opacity:.92}
 .hero-sub{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
 .hero-trust{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.82);margin-top:16px}
@@ -190,8 +190,8 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 @media(max-width:760px){
   nav.menu{display:none}
   section{padding:72px 0}
-  .hero-content{padding:0 16px 60px}
-  .hero h1{font-stretch:100%;font-size:clamp(21px,5.6vw,34px);letter-spacing:-.01em;margin:16px 0 20px;line-height:1.12;white-space:nowrap}
+  .hero-content{padding:0 22px 60px}
+  .hero h1{font-stretch:100%;font-size:clamp(26px,7.4vw,40px);letter-spacing:-.015em;margin:16px 0 20px;line-height:1.06}
   h2{font-stretch:100%;font-size:clamp(26px,7.6vw,38px)}
   .obra h3{font-stretch:100%}
   .stat b{font-stretch:100%}
@@ -222,182 +222,179 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 .zocalo-base a:hover{color:#fff}
 @media(max-width:760px){.zocalo-grid{grid-template-columns:1fr;gap:32px}.zocalo-base{flex-direction:column;gap:12px;text-align:center}}
 
-/* ---------- ancho contenido + texto a un costado (home) ---------- */
+/* ---------- ancho contenido + texto a un costado ---------- */
 .obra{max-width:860px;margin-left:auto;margin-right:auto}
 .obra-head{display:block;margin-bottom:22px}
 .obra-head .obra-desc{margin-top:14px;max-width:640px}
-.obra h3,.ficha{text-align:left}
+.obra h3{text-align:left}
+.ficha{text-align:left}
 .obra-attr{margin-top:12px}
-.compare,.pn-grid,.apoyo{max-width:860px;margin-left:auto;margin-right:auto}
-@media(max-width:760px){.obra,.compare,.pn-grid,.apoyo{max-width:100%}}
+#obras .kick,#obras h2,#obras .lead{margin-left:auto;margin-right:auto}
+#obras.obras-page .wrap>.kick,#obras.obras-page .wrap>h2,#obras.obras-page .wrap>.lead{max-width:860px}
 
+@media(max-width:760px){
+  .obra{max-width:100%}
+  
+  
+}
 
-/* ---------- sección social ---------- */
-.social{background:var(--caliza2)}
-.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px}
-.social-obra .social-ph img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--grafito)}
-.social-obra h3{font-family:var(--disp);font-stretch:110%;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:-.01em;margin:18px 0 10px}
-.social-obra p{font-size:15px;line-height:1.65;color:var(--soft)}
-@media(max-width:760px){.social-grid{grid-template-columns:1fr;gap:32px}}
-
-
-
-
-
-/* ---------- obras home: frente único + texto ancho fijo ---------- */
+.obra[id]{scroll-margin-top:90px}
+/* ---------- galería de obra ---------- */
 .obra{max-width:820px;margin-left:auto;margin-right:auto}
-.obra-head{display:block;margin-bottom:22px;max-width:680px}
-.obra-head h3{text-align:left}
-.obra-head .ficha{text-align:left}
-.obra-head .obra-desc{margin-top:14px;text-align:left;max-width:680px}
-.obra-frente{width:100%;aspect-ratio:3/2;overflow:hidden;background:var(--grafito);display:block;position:relative}
-.obra-frente>img{width:100%;height:100%;object-fit:cover;display:block}
-figure.obra-frente{margin:0}
-.obra .cmp-hint{margin:12px 0 18px}
-.ver-obra{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido);text-decoration:none;border-bottom:1px solid var(--oxido);padding-bottom:3px;transition:gap .2s,color .2s}
-.ver-obra:hover{gap:14px;color:var(--grafito);border-color:var(--grafito)}
+.obra+.obra{margin-top:88px;padding-top:64px;border-top:1px solid var(--linea)}
+.obra-head{max-width:680px;margin-bottom:26px}
+.obra-head h3,.obra-head .ficha,.obra-head .obra-desc{text-align:left}
+.obra-head .obra-desc{margin-top:14px;max-width:680px}
+.galeria{display:flex;flex-direction:column;gap:44px;margin-top:8px}
+.gal-item{margin:0}
+.gal-item>img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--grafito)}
+.gal-item figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);margin-top:10px;line-height:1.5}
+.gal-item .compare{aspect-ratio:3/2}
+.gal-item .cmp-hint{margin:10px 0 0}
+.obra[id]{scroll-margin-top:90px}
+@media(max-width:760px){.obra{max-width:100%}.obra+.obra{margin-top:56px;padding-top:44px}.galeria{gap:32px}}
 
 </style>
 </head>
-<body>
-
+<body id="top">
 <header id="hdr">
   <div class="nav">
     <a class="logo" href="#top">TM<em> · </em>Arquitectura</a>
     <nav class="menu">
-      <a href="#estudio">Estudio</a>
-      <a href="#obras">Obras</a>
-      <a href="#contacto">Contacto</a>
+      <a href="index.html#estudio">Estudio</a>
+      <a href="index.html#obras">Obras</a>
+      <a href="index.html#contacto">Contacto</a>
     </nav>
   </div>
 </header>
-
-<div class="hero" id="top">
-  <img class="hero-img" src="img/01.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high" fetchpriority="high">
-  <div class="hero-veil"></div>
-  <div class="hero-content">
-    <p class="hero-kick">Arquitectura + Construcción</p>
-    <h1>Se proyecta con criterio.<span class="thin">Se construye con oficio.</span></h1>
-    <p class="hero-sub">Obra nueva · Remodelación integral · Dirección de obra</p>
-    <p class="hero-trust">+50 proyectos entregados desde 2014 · Pilar y Zona Norte</p>
-    <a href="#contacto" class="hero-cta">Empecemos tu proyecto</a>
-  </div>
-  <p class="hero-cap">Casa El Portal · Pilar · Obra nueva</p>
-</div>
-
-<section id="estudio">
+<section id="obras" class="obras-page">
   <div class="wrap">
-    <p class="kick">El estudio</p>
-    <h2>Quiénes somos</h2>
-    <p class="lead">TM Arquitectura es un <strong>estudio de autor</strong> que proyecta y ejecuta. La convicción detrás es simple: la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye — acá esa distancia no existe. Detrás hay diez años de obra: obra nueva, remodelación integral y dirección en Zona Norte y CABA, con un mismo criterio de principio a fin: que lo que se dibuja se pueda construir, y que lo que se construye responda al presupuesto y a los plazos acordados.</p>
-    <div class="autor reveal">
-      <h3>Tobías Moyano</h3>
-      <p class="rol">Arquitecto (UBA) · Fundador</p>
-      <p>Crecí entre obras. De chico mi viejo me llevaba con él: recuerdo el olor a cemento fresco por la mañana, jugar con montañas de arena, volver a casa con la ropa manchada de cal. Esa fue mi primera escuela. De adolescente quise más y trabajé como ayudante, para entender la obra desde el pie, con las manos.</p>
-      <p>Cuando empecé la facultad entré a trabajar formalmente en la empresa constructora de mi familia, donde estuve entre 2010 y 2018: cómputo, presupuesto y dirección, aprendiendo el oficio desde adentro. Después decidí abrir mi propio camino: trabajé de forma independiente para el Gobierno de la Ciudad, en el proyecto de urbanización de la Villa 31, y en 2018 co-fundé el estudio de arquitectura kull·arq, donde proyecté y construí durante cinco años.</p>
-      <p>En 2023 fundé TM Arquitectura: un estudio integral que proyecta y ejecuta. La convicción viene de toda esa historia — la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye. En TM esa distancia no existe: diseño y construyo con un mismo criterio, de principio a fin. Cada proyecto lo firmo con mi nombre porque respondo por cada obra.</p>
-    </div>
+    <p class="kick">Portafolio</p>
+    <h2>Todas las obras</h2>
+    <p class="lead">Obra nueva, remodelación integral y reconversión de espacios en Pilar, Zona Norte y CABA. Cada proyecto, del plano a la llave.</p>
   </div>
-</section>
 
-<section id="obras">
-  <div class="wrap">
-    <p class="kick">Portfolio</p>
-    <h2>Obras destacadas</h2>
-    <p class="lead">Obra nueva y remodelaciones integrales que muestran el método completo: proyecto, ejecución y terminación. En las remodelaciones, deslizá el comparador para ver el antes y el después.</p>
-
-    <article class="obra reveal">
-      <div class="obra-head">
-        <h3>Casa El Portal</h3>
-        <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
-        <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del fundador — el estudio construye donde vive.</p>
-      </div>
-      <figure class="obra-frente"><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"></figure>
-      <a href="obras.html#casa-el-portal" class="ver-obra">Ver obra completa →</a>
-    </article>
-
-    <article class="obra reveal">
-      <div class="obra-head">
-        <h3>Casa San Jorge</h3>
-        <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
-        <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
-        <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
-      </div>
-      <div class="obra-frente compare" data-compare>
-        <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" fetchpriority="high">
-        <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-        <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-        <span class="cmp-tag cmp-tag-a">Antes</span>
-        <span class="cmp-tag cmp-tag-d">Después</span>
-        <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-      </div>
-      <p class="cmp-hint">Frente — deslizá para comparar</p>
-      <a href="obras.html#casa-san-jorge" class="ver-obra">Ver obra completa →</a>
-    </article>
-
-    <article class="obra reveal">
-      <div class="obra-head">
-        <h3>Quincho La Selva</h3>
-        <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
-        <span class="obra-attr">En conjunto con kull·arq</span>
-        <p class="obra-desc">Reconversión de un galpón en desuso en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada y baño completo.</p>
-      </div>
-      <div class="obra-frente compare" data-compare>
-        <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-        <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-        <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-        <span class="cmp-tag cmp-tag-a">Antes</span>
-        <span class="cmp-tag cmp-tag-d">Después</span>
-        <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-      </div>
-      <p class="cmp-hint">Estar y hogar — deslizá para comparar</p>
-      <a href="obras.html#quincho-la-selva" class="ver-obra">Ver obra completa →</a>
-    </article>
+<article class="obra reveal" id="casa-el-portal">
+  <div class="obra-head">
+    <h3>Casa El Portal</h3>
+    <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
+    <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del fundador — el estudio construye donde vive.</p>
   </div>
+  <div class="galeria"><figure class="gal-item"><img src="img/02.webp" alt="Contrafrente: galería con parrilla, integrada al parque" fetchpriority="high"><figcaption>Contrafrente: galería con parrilla, integrada al parque</figcaption></figure><figure class="gal-item"><img src="img/03.webp" alt="Frente y acceso" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></figure></div>
+</article>
+<article class="obra reveal" id="casa-san-jorge">
+  <div class="obra-head">
+    <h3>Casa San Jorge</h3>
+    <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
+    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
+  </div>
+  <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div><p class="cmp-hint">Frente — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/06.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div><p class="cmp-hint">Contrafrente — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/08.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+  </div><p class="cmp-hint">Lateral — deslizá para comparar</p></div><figure class="gal-item"><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería" loading="lazy" decoding="async"><figcaption>Durante la obra — pérgola metálica y nueva mampostería</figcaption></figure><figure class="gal-item"><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy" decoding="async"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></figure><figure class="gal-item"><img src="img/12.webp" alt="Después — deck y estar exterior" loading="lazy" decoding="async"><figcaption>Después — deck y estar exterior</figcaption></figure></div>
+</article>
+<article class="obra reveal" id="quincho-la-selva">
+  <div class="obra-head">
+    <h3>Quincho La Selva</h3>
+    <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    <p class="obra-desc">Reconversión de un galpón en desuso en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada y baño completo.</p>
+  </div>
+  <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div><p class="cmp-hint">Estar y hogar — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/15.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/16.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div><p class="cmp-hint">Comedor y cocina — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/17.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/18.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
+  </div><p class="cmp-hint">Exterior — deslizá para comparar</p></div><figure class="gal-item"><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy" decoding="async"><figcaption>Estar, hogar y cocina — vista general</figcaption></figure><figure class="gal-item"><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy" decoding="async"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></figure></div>
+</article>
+<article class="obra reveal" id="quincho-reclus">
+  <div class="obra-head">
+    <h3>Quincho Reclus</h3>
+    <p class="ficha">San Isidro · 2022 · 40 m² · Remodelación</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    <p class="obra-desc">Reconversión de un quincho de ladrillo visto en un espacio de estar y parrilla al exterior. Se reemplazó el techo de tejas por una pérgola metálica negra y machimbre, se construyó una barra de hormigón alisado y se integró el conjunto al parque y la pileta.</p>
+  </div>
+  <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/21.webp" alt="Quincho Reclus — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/22.webp" alt="Quincho Reclus — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho Reclus">
+  </div><p class="cmp-hint">Antes / después — deslizá para comparar</p></div><figure class="gal-item"><img src="img/23.webp" alt="Barra de hormigón alisado" loading="lazy" decoding="async"><figcaption>Barra de hormigón alisado</figcaption></figure><figure class="gal-item"><img src="img/24.webp" alt="Parrilla y salamandra Tromen" loading="lazy" decoding="async"><figcaption>Parrilla y salamandra Tromen</figcaption></figure><figure class="gal-item"><img src="img/25.webp" alt="Galería y pileta" loading="lazy" decoding="async"><figcaption>Galería y pileta</figcaption></figure></div>
+</article>
+<article class="obra reveal" id="monoambiente-tagle">
+  <div class="obra-head">
+    <h3>Monoambiente Tagle</h3>
+    <p class="ficha">Recoleta · 2023 · 25 m² · Remodelación integral</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    <p class="obra-desc">Optimización integral de un monoambiente de 25 m². Una cama rebatible libera el ambiente principal de día; una cocina lineal blanca con mesada de madera y un baño con piso calcáreo blanco y negro completan una intervención pensada para multiplicar el uso de cada metro.</p>
+  </div>
+  <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/26.webp" alt="Monoambiente Tagle — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/27.webp" alt="Monoambiente Tagle — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Monoambiente Tagle">
+  </div><p class="cmp-hint">Antes / después — deslizá para comparar</p></div><figure class="gal-item"><img src="img/28.webp" alt="Cocina lineal con mesada de madera" loading="lazy" decoding="async"><figcaption>Cocina lineal con mesada de madera</figcaption></figure><figure class="gal-item"><img src="img/29.webp" alt="Baño con piso calcáreo blanco y negro" loading="lazy" decoding="async"><figcaption>Baño con piso calcáreo blanco y negro</figcaption></figure><figure class="gal-item"><img src="img/30.webp" alt="Dormitorio y comedor integrados" loading="lazy" decoding="async"><figcaption>Dormitorio y comedor integrados</figcaption></figure></div>
+</article>
+<article class="obra reveal" id="cocina-los-tacos">
+  <div class="obra-head">
+    <h3>Cocina Los Tacos</h3>
+    <p class="ficha">Los Tacos, Pilar · 2024 · 30 m² · Remodelación</p>
+      <span class="obra-attr">En conjunto con kull·arq</span>
+    <p class="obra-desc">Apertura de una cocina cerrada hacia el comedor y la galería. Se eliminó el tabique, se incorporó una isla con mesada negra y campana de acero, y se sumó un nicho de madera que ordena los electrodomésticos y vincula la cocina con el parque.</p>
+  </div>
+  <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/31.webp" alt="Cocina Los Tacos — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/32.webp" alt="Cocina Los Tacos — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Cocina Los Tacos">
+  </div><p class="cmp-hint">Antes / después — deslizá para comparar</p></div><figure class="gal-item"><img src="img/33.webp" alt="Isla y campana de acero" loading="lazy" decoding="async"><figcaption>Isla y campana de acero</figcaption></figure><figure class="gal-item"><img src="img/34.webp" alt="Galería revestida en madera" loading="lazy" decoding="async"><figcaption>Galería revestida en madera</figcaption></figure><figure class="gal-item"><img src="img/35.webp" alt="Nicho de madera para electrodomésticos" loading="lazy" decoding="async"><figcaption>Nicho de madera para electrodomésticos</figcaption></figure></div>
+</article>
   <div class="wrap ver-todas-wrap">
-    <a href="obras.html" class="ver-todas">Ver todas las obras →</a>
+    <a href="index.html" class="ver-todas">← Volver al inicio</a>
   </div>
+
 </section>
-
-
-<section class="cta" id="contacto">
-  <div class="wrap">
-    <p class="kick">Contacto</p>
-    <h2>Hablemos de tu proyecto</h2>
-    <p class="lead">Obra nueva, remodelación integral o dirección de obra: contanos qué tenés en mente y coordinamos una reunión.</p>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="https://wa.me/5491167369265">WhatsApp · 11-6736-9265</a>
-      <a class="btn btn-line" href="mailto:moyanotobias@gmail.com">moyanotobias@gmail.com</a>
-    </div>
-    <p class="zona">Trabajamos en Zona Norte: Pilar</p>
-  </div>
-</section>
-
-<section id="social" class="social">
-  <div class="wrap">
-    <p class="kick">Compromiso</p>
-    <h2>Arquitectura que da hogar</h2>
-    <p class="lead">La misma convicción que guía cada obra la llevamos también donde más se necesita: construir un techo digno cambia una vida. Estos son algunos de los proyectos que hicimos con ese espíritu.</p>
-    <div class="social-grid">
-      <article class="social-obra reveal">
-        <figure class="social-ph"><img src="img/social-cofre.webp" alt="Casa Cofre — módulo de vivienda social" loading="lazy" decoding="async"></figure>
-        <h3>Casa Cofre</h3>
-        <p>Sobre un terreno con una vivienda precaria, construimos un módulo de 4 × 8 m: una habitación, cocina y baño, con una galería integrada. Un hogar digno y completo donde antes no lo había.</p>
-      </article>
-      <article class="social-obra reveal">
-        <figure class="social-ph"><img src="img/social-julian.webp" alt="Casa Julián — módulo de vivienda con escalera para expansión" loading="lazy" decoding="async"></figure>
-        <h3>Casa Julián</h3>
-        <p>En un terreno compartido, levantamos un módulo de 4 × 8 m con baño, cocina integrada al ambiente principal y una escalera preparada para su futura expansión: una casa pensada para crecer con la familia.</p>
-      </article>
-      <article class="social-obra reveal">
-        <figure class="social-ph"><img src="img/social-techo.webp" alt="Casas TECHO — viviendas modulares de madera" loading="lazy" decoding="async"></figure>
-        <h3>Casas TECHO</h3>
-        <p>Junto a mi familia construimos varias viviendas modulares de madera con Un Techo para mi País, sumando manos a la tarea de que ninguna familia se quede sin un lugar donde vivir.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
 <footer class="zocalo">
   <div class="wrap zocalo-grid">
     <div class="zocalo-brand">
@@ -407,11 +404,10 @@ figure.obra-frente{margin:0}
     </div>
     <div class="zocalo-col">
       <p class="zocalo-h">Estudio</p>
-      <a href="#obras">Obras</a>
-      <a href="obras.html">Todas las obras</a>
-      <a href="#estudio">El estudio</a>
-      <a href="#social">Compromiso</a>
-      <a href="#contacto">Contacto</a>
+      <a href="index.html#obras">Obras</a>
+      <a href="obras.html" class="cur">Todas las obras</a>
+      <a href="index.html#estudio">El estudio</a>
+      <a href="index.html#contacto">Contacto</a>
     </div>
     <div class="zocalo-col">
       <p class="zocalo-h">Contacto</p>
@@ -425,7 +421,6 @@ figure.obra-frente{margin:0}
     <a href="#top">Volver arriba ↑</a>
   </div>
 </footer>
-
 <script>
 (function(){
   // header solid on scroll
@@ -494,6 +489,7 @@ figure.obra-frente{margin:0}
       });
     });
   });
+
 })();
 </script>
 </body>
