@@ -221,6 +221,39 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 .zocalo-base a{color:rgba(255,255,255,.7);text-decoration:none}
 .zocalo-base a:hover{color:#fff}
 @media(max-width:760px){.zocalo-grid{grid-template-columns:1fr;gap:32px}.zocalo-base{flex-direction:column;gap:12px;text-align:center}}
+
+/* ---------- ancho contenido + texto a un costado ---------- */
+.obra{max-width:860px;margin-left:auto;margin-right:auto}
+.obra-head{display:block;margin-bottom:22px}
+.obra-head .obra-desc{margin-top:14px;max-width:640px}
+.obra h3{text-align:left}
+.ficha{text-align:left}
+.obra-attr{margin-top:12px}
+#obras .kick,#obras h2,#obras .lead{margin-left:auto;margin-right:auto}
+#obras.obras-page .wrap>.kick,#obras.obras-page .wrap>h2,#obras.obras-page .wrap>.lead{max-width:860px}
+/* ---------- carrusel ---------- */
+.carrusel{position:relative;max-width:860px;margin:0 auto;background:var(--grafito)}
+.carrusel-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.carrusel-track::-webkit-scrollbar{display:none}
+.carrusel-slide{flex:0 0 100%;scroll-snap-align:center;position:relative}
+.carrusel-slide>img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.carrusel-slide figcaption{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--soft);margin-top:9px;line-height:1.5;padding:0 2px}
+.carrusel-slide .compare{aspect-ratio:3/2}
+.car-btn{position:absolute;top:calc(50% - 24px);transform:translateY(-50%);width:46px;height:46px;border:none;background:rgba(26,25,24,.55);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:4;transition:background .2s;backdrop-filter:blur(2px)}
+.car-btn:hover{background:rgba(26,25,24,.85)}
+.car-prev{left:12px}
+.car-next{right:12px}
+.car-dots{display:flex;gap:8px;justify-content:center;margin-top:16px}
+.car-dot{width:8px;height:8px;border-radius:50%;background:var(--linea);border:none;padding:0;cursor:pointer;transition:background .2s,transform .2s}
+.car-dot.act{background:var(--oxido);transform:scale(1.3)}
+.car-count{position:absolute;bottom:12px;right:14px;z-index:4;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:#fff;background:rgba(26,25,24,.55);padding:4px 10px;backdrop-filter:blur(2px)}
+@media(max-width:760px){
+  .obra{max-width:100%}
+  .car-btn{width:38px;height:38px;font-size:16px}
+  .carrusel,.carrusel-slide>img,.compare{max-width:100%}
+}
+
+.obra[id]{scroll-margin-top:90px}
 </style>
 </head>
 <body id="top">
@@ -241,163 +274,71 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <p class="lead">Obra nueva, remodelación integral y reconversión de espacios en Pilar, Zona Norte y CABA. Cada proyecto, del plano a la llave.</p>
   </div>
 
-<article class="obra reveal">
+<article class="obra reveal" id="casa-el-portal">
   <div class="obra-head">
     <div>
       <h3>Casa El Portal</h3>
       <p class="ficha">El Portal de Pilar · 2021 · 220 m² · Obra nueva</p>
     </div>
-    <p class="obra-desc">Vivienda unifamiliar de 220 m² proyectada y construida íntegramente por el estudio: proyecto, dirección y ejecución. Es, además, la casa propia del socio fundador — el estudio construye donde vive.</p>
-  </div>
-  <div class="pn-grid">
-    <figure><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"><figcaption>Contrafrente: galería con parrilla, integrada al parque</figcaption></figure>
-    <figure><img src="img/03.webp" alt="Casa El Portal — frente" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></figure>
-  </div>
-</article><article class="obra reveal">
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><img src="img/02.webp" alt="Casa El Portal — contrafrente, galería y parque" fetchpriority="high"><figcaption>Contrafrente: galería con parrilla, integrada al parque</figcaption></div><div class="carrusel-slide"><img src="img/03.webp" alt="Casa El Portal — frente" loading="lazy" decoding="async"><figcaption>Frente y acceso</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
+</article><article class="obra reveal" id="casa-san-jorge">
   <div class="obra-head">
     <div>
       <h3>Casa San Jorge</h3>
       <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
       <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
     </div>
-    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con el volumen del quincho revestido en piedra, carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
-  </div>
-  <div class="compare" data-compare>
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div>
-  <p class="cmp-hint">Frente — deslizá para comparar</p>
-  <div class="compare" data-compare>
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/06.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div>
-  <p class="cmp-hint">Contrafrente — deslizá para comparar</p>
-  <div class="compare" data-compare>
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/08.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div>
-  <p class="cmp-hint">Lateral — deslizá para comparar</p>
-  <div class="apoyo">
-    <figure><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería del frente" loading="lazy"><figcaption>Durante la obra — pérgola metálica y nueva mampostería del frente</figcaption></figure>
-    <figure><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></figure>
-    <figure><img src="img/12.webp" alt="Después — deck y estar exterior sobre el lateral" loading="lazy"><figcaption>Después — deck y estar exterior sobre el lateral</figcaption></figure></div>
-</article><article class="obra reveal">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería del frente" loading="lazy"><figcaption>Durante la obra — pérgola metálica y nueva mampostería del frente</figcaption></div><div class="carrusel-slide"><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></div><div class="carrusel-slide"><img src="img/12.webp" alt="Después — deck y estar exterior sobre el lateral" loading="lazy"><figcaption>Después — deck y estar exterior sobre el lateral</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
+</article><article class="obra reveal" id="quincho-la-selva">
   <div class="obra-head">
     <div>
       <h3>Quincho La Selva</h3>
       <p class="ficha">Quinta privada, Pilar · 2019 · 60 m² · Remodelación integral</p>
       <span class="obra-attr">En conjunto con kull·arq</span>
     </div>
-    <p class="obra-desc">Reconversión de un galpón en desuso de una quinta en Pilar en el quincho principal de la casa. Se conservaron las cabriadas metálicas originales —recuperadas y pintadas de verde— bajo un nuevo cielorraso de machimbre blanco, y se sumaron hogar de cemento alisado, cocina integrada, baño completo y portón corredizo de madera.</p>
-  </div>
-  <div class="compare" data-compare>
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/13.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div>
-  <p class="cmp-hint">Estar y hogar — deslizá para comparar</p>
-  <div class="compare" data-compare>
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/14.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/15.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/16.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div>
-  <p class="cmp-hint">Comedor y cocina — deslizá para comparar</p>
-  <div class="compare" data-compare>
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/16.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/17.webp" alt="Quincho La Selva — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/18.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho La Selva">
-  </div>
-  <p class="cmp-hint">Baño — deslizá para comparar</p>
-  <div class="apoyo">
-    <figure><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy"><figcaption>Estar, hogar y cocina — vista general</figcaption></figure>
-    <figure><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></figure></div>
-</article><article class="obra reveal">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/18.webp" alt="Quincho La Selva — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><img src="img/19.webp" alt="Estar, hogar y cocina — vista general" loading="lazy"><figcaption>Estar, hogar y cocina — vista general</figcaption></div><div class="carrusel-slide"><img src="img/20.webp" alt="Comedor bajo las cabriadas recuperadas" loading="lazy"><figcaption>Comedor bajo las cabriadas recuperadas</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
+</article><article class="obra reveal" id="quincho-reclus">
   <div class="obra-head">
     <div>
       <h3>Quincho Reclus</h3>
       <p class="ficha">San Isidro · 2018 · 30 m² · Remodelación integral</p>
       <span class="obra-attr">En conjunto con kull·arq</span>
     </div>
-    <p class="obra-desc">Reconversión de un quincho de ladrillo visto en un espacio de estar y parrilla al exterior. Se reemplazó el techo de tejas por una pérgola metálica negra y machimbre, se construyó una barra de hormigón alisado y se integró el conjunto al parque y la pileta.</p>
-  </div>
-  <div class="compare" data-compare>
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/21.webp" alt="Quincho Reclus — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/22.webp" alt="Quincho Reclus — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Quincho Reclus">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/23.webp" alt="Barra de hormigón alisado" loading="lazy"><figcaption>Barra de hormigón alisado</figcaption></figure>
-    <figure><img src="img/24.webp" alt="Parrilla y salamandra Tromen" loading="lazy"><figcaption>Parrilla y salamandra Tromen</figcaption></figure>
-    <figure><img src="img/25.webp" alt="Galería y pileta" loading="lazy"><figcaption>Galería y pileta</figcaption></figure></div>
-</article><article class="obra reveal">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/22.webp" alt="Quincho Reclus — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><img src="img/23.webp" alt="Barra de hormigón alisado" loading="lazy"><figcaption>Barra de hormigón alisado</figcaption></div><div class="carrusel-slide"><img src="img/24.webp" alt="Parrilla y salamandra Tromen" loading="lazy"><figcaption>Parrilla y salamandra Tromen</figcaption></div><div class="carrusel-slide"><img src="img/25.webp" alt="Galería y pileta" loading="lazy"><figcaption>Galería y pileta</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
+</article><article class="obra reveal" id="monoambiente-tagle">
   <div class="obra-head">
     <div>
       <h3>Monoambiente Tagle</h3>
       <p class="ficha">CABA · 2020 · 25 m² · Remodelación integral</p>
       <span class="obra-attr">En conjunto con kull·arq</span>
     </div>
-    <p class="obra-desc">Optimización integral de un monoambiente de 25 m². Una cama rebatible libera el ambiente principal de día; una cocina lineal blanca con mesada de madera y un baño con piso calcáreo blanco y negro completan una intervención pensada para multiplicar el uso de cada metro.</p>
-  </div>
-  <div class="compare" data-compare>
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/26.webp" alt="Monoambiente Tagle — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/27.webp" alt="Monoambiente Tagle — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Monoambiente Tagle">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/28.webp" alt="Cocina lineal con mesada de madera" loading="lazy"><figcaption>Cocina lineal con mesada de madera</figcaption></figure>
-    <figure><img src="img/29.webp" alt="Baño con piso calcáreo blanco y negro" loading="lazy"><figcaption>Baño con piso calcáreo blanco y negro</figcaption></figure>
-    <figure><img src="img/30.webp" alt="Dormitorio y comedor integrados" loading="lazy"><figcaption>Dormitorio y comedor integrados</figcaption></figure></div>
-</article><article class="obra reveal">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/27.webp" alt="Monoambiente Tagle — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><img src="img/28.webp" alt="Cocina lineal con mesada de madera" loading="lazy"><figcaption>Cocina lineal con mesada de madera</figcaption></div><div class="carrusel-slide"><img src="img/29.webp" alt="Baño con piso calcáreo blanco y negro" loading="lazy"><figcaption>Baño con piso calcáreo blanco y negro</figcaption></div><div class="carrusel-slide"><img src="img/30.webp" alt="Dormitorio y comedor integrados" loading="lazy"><figcaption>Dormitorio y comedor integrados</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
+</article><article class="obra reveal" id="cocina-los-tacos">
   <div class="obra-head">
     <div>
       <h3>Cocina Los Tacos</h3>
       <p class="ficha">B° Los Tacos, Escobar · 2020 · 30 m² · Remodelación integral</p>
       <span class="obra-attr">En conjunto con kull·arq</span>
     </div>
-    <p class="obra-desc">Apertura de una cocina cerrada hacia el comedor y la galería. Se eliminó el tabique, se incorporó una isla con mesada negra y campana de acero, y se sumó un nicho de madera que ordena los electrodomésticos y vincula la cocina con el parque.</p>
-  </div>
-  <div class="compare" data-compare>
+<div class="carrusel" data-carrusel><div class="carrusel-track"><div class="carrusel-slide"><div class="compare" data-compare>
     <img class="cmp-after" src="img/31.webp" alt="Cocina Los Tacos — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/32.webp" alt="Cocina Los Tacos — antes" draggable="false" loading="lazy" decoding="async"></div>
-    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
-    <span class="cmp-tag cmp-tag-a">Antes</span>
-    <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Cocina Los Tacos">
-  </div>
-  <p class="cmp-hint">Deslizá para comparar antes / después</p>
-  <div class="apoyo">
-    <figure><img src="img/33.webp" alt="Isla y campana de acero" loading="lazy"><figcaption>Isla y campana de acero</figcaption></figure>
-    <figure><img src="img/34.webp" alt="Galería revestida en madera" loading="lazy"><figcaption>Galería revestida en madera</figcaption></figure>
-    <figure><img src="img/35.webp" alt="Nicho de madera para electrodomésticos" loading="lazy"><figcaption>Nicho de madera para electrodomésticos</figcaption></figure></div>
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/32.webp" alt="Cocina Los Tacos — antes" draggable="false" loading="lazy" decoding="async"></div><figcaption>Deslizá para comparar</figcaption></div><div class="carrusel-slide"><img src="img/33.webp" alt="Isla y campana de acero" loading="lazy"><figcaption>Isla y campana de acero</figcaption></div><div class="carrusel-slide"><img src="img/34.webp" alt="Galería revestida en madera" loading="lazy"><figcaption>Galería revestida en madera</figcaption></div><div class="carrusel-slide"><img src="img/35.webp" alt="Nicho de madera para electrodomésticos" loading="lazy"><figcaption>Nicho de madera para electrodomésticos</figcaption></div></div><button class="car-btn car-prev" aria-label="Anterior">‹</button><button class="car-btn car-next" aria-label="Siguiente">›</button><span class="car-count"></span></div><div class="car-dots"></div>
 </article>
   <div class="wrap ver-todas-wrap">
     <a href="index.html" class="ver-todas">← Volver al inicio</a>
@@ -498,6 +439,29 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
       });
     });
   });
+
+  // carrusel: flechas + dots + snap
+  document.querySelectorAll('[data-carrusel]').forEach(function(car){
+    var track=car.querySelector('.carrusel-track');
+    var slides=Array.prototype.slice.call(track.children);
+    var dotsWrap=car.parentNode.querySelector('.car-dots');
+    var count=car.querySelector('.car-count');
+    var n=slides.length, cur=0;
+    function go(i){ cur=Math.max(0,Math.min(n-1,i)); track.scrollTo({left:track.clientWidth*cur,behavior:'smooth'}); upd(); }
+    function upd(){
+      if(dotsWrap) dotsWrap.querySelectorAll('.car-dot').forEach(function(d,i){ d.classList.toggle('act',i===cur); });
+      if(count) count.textContent=(cur+1)+' / '+n;
+    }
+    var prev=car.querySelector('.car-prev'), next=car.querySelector('.car-next');
+    if(prev) prev.addEventListener('click',function(){ go(cur-1); });
+    if(next) next.addEventListener('click',function(){ go(cur+1); });
+    if(dotsWrap){ slides.forEach(function(_,i){ var b=document.createElement('button'); b.className='car-dot'+(i===0?' act':''); b.setAttribute('aria-label','Foto '+(i+1)); b.addEventListener('click',function(){ go(i); }); dotsWrap.appendChild(b); }); }
+    // actualizar índice al deslizar manualmente
+    var t;
+    track.addEventListener('scroll',function(){ clearTimeout(t); t=setTimeout(function(){ cur=Math.round(track.scrollLeft/track.clientWidth); upd(); },120); },{passive:true});
+    upd();
+  });
+
 })();
 </script>
 </body>
