@@ -4,8 +4,9 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TM · Arquitectura — Todas las obras</title>
+<title>Todas las obras — TM · Arquitectura</title>
 <meta name="description" content="TM Arquitectura — estudio de arquitectura y construcción. Obra nueva, remodelación integral y dirección de obra en CABA y Zona Norte.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,600;125,700;125,800&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -256,17 +257,22 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 .obra[id]{scroll-margin-top:90px}
 @media(max-width:760px){.obra{max-width:100%;padding-left:24px;padding-right:24px}.obra+.obra{margin-top:56px;padding-top:44px}.galeria{gap:32px}}
 
+.volver-top{display:none;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta);text-decoration:none;border:1px solid var(--linea);padding:8px 16px;transition:background .2s,color .2s}
+.volver-top:hover{background:var(--tinta);color:var(--caliza)}
+@media(max-width:760px){.volver-top{display:inline-block}}
+
 </style>
 </head>
 <body id="top">
 <header id="hdr">
   <div class="nav">
-    <a class="logo" href="#top">TM<em> · </em>Arquitectura</a>
+    <a class="logo" href="index.html">TM<em> · </em>Arquitectura</a>
     <nav class="menu">
       <a href="index.html#estudio">Estudio</a>
       <a href="index.html#obras">Obras</a>
       <a href="index.html#contacto">Contacto</a>
     </nav>
+    <a class="volver-top" href="index.html">← Inicio</a>
   </div>
 </header>
 <section id="obras" class="obras-page">
@@ -312,7 +318,7 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
     <span class="cmp-tag cmp-tag-a">Antes</span>
     <span class="cmp-tag cmp-tag-d">Después</span>
     <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div><p class="cmp-hint">Lateral — deslizá para comparar</p></div><figure class="gal-item"><img src="img/10.webp" alt="Durante la obra — pérgola metálica y nueva mampostería" loading="lazy" decoding="async"><figcaption>Durante la obra — pérgola metálica y nueva mampostería</figcaption></figure><figure class="gal-item"><img src="img/11.webp" alt="Antes — esquina de ladrillo y piedra" loading="lazy" decoding="async"><figcaption>Antes — esquina de ladrillo y piedra</figcaption></figure><figure class="gal-item"><img src="img/12.webp" alt="Después — deck y estar exterior" loading="lazy" decoding="async"><figcaption>Después — deck y estar exterior</figcaption></figure></div>
+  </div><p class="cmp-hint">Lateral — deslizá para comparar</p></div></div>
 </article>
 <article class="obra reveal" id="quincho-la-selva">
   <div class="obra-head">
