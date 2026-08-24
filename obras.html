@@ -13,7 +13,7 @@
 <style>
 :root{
   --caliza:#F2EEE7; --caliza2:#F8F6F1; --grafito:#232220; --ink:#1A1918;
-  --soft:#5A564F; --oxido:#A1492B; --oxido2:#C77B5F; --linea:#D9D3C8;
+  --soft:#5A564F; --oxido:#1A1918; --oxido2:#8A8580; --linea:#D9D3C8;
   --disp:'Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'Spectral',Georgia,serif;
   --mono:'IBM Plex Mono','Courier New',monospace;
@@ -261,6 +261,11 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
 .volver-top:hover{background:var(--tinta);color:var(--caliza)}
 @media(max-width:760px){.volver-top{display:inline-block}}
 
+
+/* ---------- texto justificado (párrafos de contenido, no títulos) ---------- */
+.obra-desc,.lead,.autor-texto p,.serv p,.social-obra p,.estudio-lead,#estudio>.wrap>p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+@media(max-width:760px){.obra-desc,.lead,.autor-texto p,.serv p,.social-obra p,.estudio-lead,#estudio>.wrap>p{text-align:left;hyphens:none}}
+
 </style>
 </head>
 <body id="top">
@@ -294,31 +299,38 @@ footer{padding:30px 28px;text-align:center;font-family:var(--mono);font-size:10.
   <div class="obra-head">
     <h3>Casa San Jorge</h3>
     <p class="ficha">B° San Jorge, Don Torcuato · 2025 · 200 m² · Remodelación integral</p>
-      <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
-    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con carpinterías nuevas, deck y paisajismo en todo el perímetro.</p>
+    <span class="obra-attr">En conjunto con arq. Sofía Couffignal</span>
+    <p class="obra-desc">Remodelación integral de una vivienda de 200 m²: se intervino la casa completa. En el exterior, la construcción de ladrillo con esquineros de piedra almohadillada se reconvirtió en volúmenes puros de revoque texturado, con carpinterías nuevas, deck y paisajismo en todo el perímetro. En el interior, se abrieron los ambientes, se renovaron cocina y baños, y se sumó un hogar de piedra que articula el estar con el comedor.</p>
   </div>
   <div class="galeria"><div class="gal-item"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/04.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/05.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <img class="cmp-after" src="img/sj-frente-despues.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/sj-frente-antes.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
     <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
     <span class="cmp-tag cmp-tag-a">Antes</span>
     <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después — Frente">
   </div><p class="cmp-hint">Frente — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/06.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/07.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <img class="cmp-after" src="img/sj-contrafrente-despues.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/sj-contrafrente-antes.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
     <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
     <span class="cmp-tag cmp-tag-a">Antes</span>
     <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después — Contrafrente">
   </div><p class="cmp-hint">Contrafrente — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
-    <img class="cmp-after" src="img/08.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
-    <div class="cmp-before-wrap"><img class="cmp-before" src="img/09.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <img class="cmp-after" src="img/sj-pasillo-despues.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/sj-pasillo-antes.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
     <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
     <span class="cmp-tag cmp-tag-a">Antes</span>
     <span class="cmp-tag cmp-tag-d">Después</span>
-    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después de Casa San Jorge">
-  </div><p class="cmp-hint">Lateral — deslizá para comparar</p></div></div>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después — Interior">
+  </div><p class="cmp-hint">Interior — deslizá para comparar</p></div><div class="gal-item"><div class="compare" data-compare>
+    <img class="cmp-after" src="img/sj-living-despues.webp" alt="Casa San Jorge — después" draggable="false" loading="lazy" decoding="async">
+    <div class="cmp-before-wrap"><img class="cmp-before" src="img/sj-living-antes.webp" alt="Casa San Jorge — antes" draggable="false" loading="lazy" decoding="async"></div>
+    <div class="cmp-line"><div class="cmp-knob">◂ ▸</div></div>
+    <span class="cmp-tag cmp-tag-a">Antes</span>
+    <span class="cmp-tag cmp-tag-d">Después</span>
+    <input type="range" class="cmp-range" min="0" max="100" value="50" aria-label="Comparar antes y después — Living y comedor">
+  </div><p class="cmp-hint">Living y comedor — deslizá para comparar</p></div><figure class="gal-item"><img src="img/sj-living-estar.webp" alt="Living con hogar de piedra y salida al parque" loading="lazy" decoding="async"><figcaption>Living con hogar de piedra y salida al parque</figcaption></figure><figure class="gal-item"><img src="img/sj-cocina-isla.webp" alt="Cocina con isla de cuarzo y muebles de madera" loading="lazy" decoding="async"><figcaption>Cocina con isla de cuarzo y muebles de madera</figcaption></figure><figure class="gal-item"><img src="img/sj-cocina-parque.webp" alt="Cocina integrada, con ventanal al jardín" loading="lazy" decoding="async"><figcaption>Cocina integrada, con ventanal al jardín</figcaption></figure></div>
 </article>
 <article class="obra reveal" id="quincho-la-selva">
   <div class="obra-head">
