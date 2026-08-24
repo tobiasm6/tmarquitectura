@@ -25,7 +25,7 @@
 <style>
 :root{
   --caliza:#F2EEE7; --caliza2:#F8F6F1; --grafito:#232220; --ink:#1A1918;
-  --soft:#5A564F; --oxido:#A1492B; --oxido2:#C77B5F; --linea:#D9D3C8;
+  --soft:#5A564F; --oxido:#1A1918; --oxido2:#8A8580; --linea:#D9D3C8;
   --disp:'Archivo','Helvetica Neue',Arial,sans-serif;
   --body:'Spectral',Georgia,serif;
   --mono:'IBM Plex Mono','Courier New',monospace;
@@ -56,8 +56,8 @@ html:not(.js) #hdr{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);bo
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
 .hero-veil{position:absolute;inset:0;background:linear-gradient(178deg,rgba(26,25,24,.42) 0%,rgba(26,25,24,.12) 42%,rgba(26,25,24,.78) 100%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1120px;margin:0 auto;padding:0 28px 72px;color:#fff;text-align:center;display:flex;flex-direction:column;align-items:center}
-.hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxido2);display:flex;align-items:center;gap:14px;justify-content:center}
-.hero-kick::before,.hero-kick::after{content:"";width:34px;height:2px;background:var(--oxido)}
+.hero-kick{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.92);display:flex;align-items:center;gap:14px;justify-content:center}
+.hero-kick::before,.hero-kick::after{content:"";width:34px;height:2px;background:rgba(255,255,255,.7)}
 .hero h1{font-family:var(--disp);font-stretch:105%;font-weight:800;font-size:clamp(28px,4.4vw,52px);line-height:1.08;letter-spacing:-.005em;margin:22px 0 26px;text-transform:uppercase;white-space:nowrap}
 .hero h1 .thin{display:block;font-weight:600;color:var(--caliza);opacity:.92}
 .hero-sub{font-family:var(--mono);font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
@@ -68,9 +68,9 @@ html:not(.js) #hdr{background:rgba(242,238,231,.96);backdrop-filter:blur(8px);bo
 .obra{padding-top:64px;margin-top:64px;border-top:1px solid var(--linea)}
 .obra:first-of-type{padding-top:0;margin-top:0;border-top:none}
 .obra-attr{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oxido2);border:1px solid var(--linea);padding:4px 12px;border-radius:2px}
-.autor{max-width:680px;margin-top:36px}
-.autor h3{font-family:var(--disp);font-stretch:110%;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
-.autor .rol{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido2);margin:6px 0 16px}
+
+
+
 .ver-todas-wrap{margin-top:56px;text-align:center}
 .ver-todas{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border:1px solid var(--tinta);color:var(--tinta);font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s}
 .ver-todas:hover{background:var(--tinta);color:var(--caliza)}
@@ -271,6 +271,29 @@ figure.obra-frente{margin:0}
 .ver-obra{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido);text-decoration:none;border-bottom:1px solid var(--oxido);padding-bottom:3px;transition:gap .2s,color .2s}
 .ver-obra:hover{gap:14px;color:var(--grafito);border-color:var(--grafito)}
 
+.autor{max-width:900px;margin-top:36px;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start}
+.autor-foto{margin:0}
+.autor-foto img{width:100%;aspect-ratio:1;object-fit:cover;filter:grayscale(100%);background:var(--grafito)}
+.autor-texto h3{font-family:var(--disp);font-stretch:110%;font-size:26px;text-transform:uppercase;letter-spacing:-.01em}
+.autor-texto .rol{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--oxido2);margin:6px 0 16px}
+@media(max-width:760px){.autor{grid-template-columns:1fr;gap:24px}.autor-foto{max-width:180px}}
+
+
+/* ---------- servicios ---------- */
+#servicios{background:var(--caliza2)}
+.serv-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:44px;background:var(--linea)}
+.serv{background:var(--caliza2);padding:44px 40px}
+.serv-num{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--soft)}
+.serv h3{font-family:var(--disp);font-stretch:110%;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:-.01em;margin:18px 0 16px}
+.serv p{font-size:16px;line-height:1.7;color:var(--soft);max-width:46ch}
+@media(max-width:980px){.serv-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.serv-grid{grid-template-columns:1fr}.serv{padding:36px 24px}}
+
+
+/* ---------- texto justificado (párrafos de contenido, no títulos) ---------- */
+.obra-desc,.lead,.autor-texto p,.serv p,.social-obra p,.estudio-lead,#estudio>.wrap>p{text-align:justify;text-justify:inter-word;hyphens:auto;-webkit-hyphens:auto}
+@media(max-width:760px){.obra-desc,.lead,.autor-texto p,.serv p,.social-obra p,.estudio-lead,#estudio>.wrap>p{text-align:left;hyphens:none}}
+
 </style>
 </head>
 <body>
@@ -279,6 +302,7 @@ figure.obra-frente{margin:0}
   <div class="nav">
     <a class="logo" href="#top">TM<em> · </em>Arquitectura</a>
     <nav class="menu">
+      <a href="#servicios">Servicios</a>
       <a href="#estudio">Estudio</a>
       <a href="#obras">Obras</a>
       <a href="#contacto">Contacto</a>
@@ -305,14 +329,43 @@ figure.obra-frente{margin:0}
     <h2>Quiénes somos</h2>
     <p class="lead">TM Arquitectura es un <strong>estudio de autor</strong> que proyecta y ejecuta. La convicción detrás es simple: la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye — acá esa distancia no existe. Detrás hay diez años de obra: obra nueva, remodelación integral y dirección en Zona Norte y CABA, con un mismo criterio de principio a fin: que lo que se dibuja se pueda construir, y que lo que se construye responda al presupuesto y a los plazos acordados.</p>
     <div class="autor reveal">
+      <figure class="autor-foto"><img src="tobias.webp" alt="Tobías Moyano — arquitecto y fundador de TM Arquitectura" loading="lazy" decoding="async"></figure>
+      <div class="autor-texto">
       <h3>Tobías Moyano</h3>
       <p class="rol">Arquitecto (UBA) · Fundador</p>
       <p>Crecí entre obras. De chico mi viejo me llevaba con él: recuerdo el olor a cemento fresco por la mañana, jugar con montañas de arena, volver a casa con la ropa manchada de cal. Esa fue mi primera escuela. De adolescente quise más y trabajé como ayudante, para entender la obra desde el pie, con las manos.</p>
       <p>Cuando empecé la facultad entré a trabajar formalmente en la empresa constructora de mi familia, donde estuve entre 2010 y 2018: cómputo, presupuesto y dirección, aprendiendo el oficio desde adentro. Después decidí abrir mi propio camino: trabajé de forma independiente para el Gobierno de la Ciudad, en el proyecto de urbanización de la Villa 31, y en 2018 co-fundé el estudio de arquitectura kull·arq, donde proyecté y construí durante cinco años.</p>
       <p>En 2023 fundé TM Arquitectura: un estudio integral que proyecta y ejecuta. La convicción viene de toda esa historia — la mayoría de los problemas de una obra nacen en la distancia entre el que dibuja y el que construye. En TM esa distancia no existe: nos adaptamos al cliente para brindar la mejor solución, resolviendo sus necesidades y creando espacios habitables que generen experiencias únicas en cada ambiente.</p>
+      </div>
     </div>
   </div>
 </section>
+
+<section id="servicios">
+  <div class="wrap">
+    <p class="kick">Qué hacemos</p>
+    <h2>Tres formas de trabajar juntos</h2>
+    <div class="serv-grid">
+      <article class="serv reveal">
+        <span class="serv-num">01</span>
+        <h3>Obra nueva</h3>
+        <p>Te acompañamos desde la elección del terreno, pasando por el proyecto ejecutivo, hasta la obra integral. Un solo estudio en todo el recorrido: proyectamos y construimos tu casa de principio a fin.</p>
+      </article>
+      <article class="serv reveal">
+        <span class="serv-num">02</span>
+        <h3>Remodelación integral</h3>
+        <p>Te asesoramos en la remodelación de los ambientes de tu casa para mejorar la habitabilidad, agregando valor a los espacios y adaptándolos a cómo vivís hoy.</p>
+      </article>
+      <article class="serv reveal">
+        <span class="serv-num">03</span>
+        <h3>Invertí con nosotros</h3>
+        <p>Desarrollamos proyectos residenciales para la venta. Sumate como inversor y participá del retorno en dólares al momento de la venta de cada unidad: una forma de hacer crecer tu capital respaldada por obra real. Escribinos y te contamos las oportunidades disponibles.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
 
 <section id="obras">
   <div class="wrap">
